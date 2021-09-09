@@ -1,0 +1,751 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+
+
+/* Restyling Bootstrap's colors to mine without losing responsiveness */
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #3d526d;
+  --bs-secondary: #54595f;
+  --bs-success: #a6adb4;
+  --bs-info: #f2f4fa;
+  --bs-warning: #87ceea;
+  --bs-danger: #d2d6d9;
+  --bs-light: #e6f5fa;
+  --bs-dark: #dbebff;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #87CEEA;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+  background-color: gray;
+
+}
+h1{
+  font-weight: 700;
+  font-size: 9em;
+}
+h2{
+  font-weight: 400;
+  font-size: 5.2em;
+}
+h3{
+  font-weight: 400;
+  font-size: 4em;
+}
+h4{
+  font-weight: 400;
+  font-size: 3em;
+}
+h5{
+  font-weight: 300;
+  font-size: 2.5em;
+}
+h6{
+  font-weight: 400;
+  font-size: 2em;
+}
+p{
+  font-weight: 300;
+  font-size: 1.6em;
+  line-height: 2;
+}
+
+.btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 2.5em;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3d526d;
+  border-color: #3d526d;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #34465d;
+  border-color: #314257;
+}
+
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #34465d;
+  border-color: #314257;
+  box-shadow: 0 0 0 0.25rem rgba(90, 108, 131, 0.5);
+}
+
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #314257;
+  border-color: #2e3e52;
+}
+
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(90, 108, 131, 0.5);
+}
+
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+  background-color: #3d526d;
+  border-color: #3d526d;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #314257;
+  border-color: #314257;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(90, 108, 131, 0.5);
+}
+.btn-outline-primary {
+  color: #314257;
+  border-color: #314257;
+}
+
+.btn-outline-primary:hover {
+  color: rgba(90, 108, 131, 0.5);
+  background-color: #314257;
+  border-color: #314257;
+}
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #314257;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #314257;
+  border-color: #314257;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+/* ########################### TESTING SECONDARY BUTTON FOR BETTER CALL TO ACTION ################################ */
+.btn-secondary {
+  color: #fff;
+  background-color: #87CEEA;
+  border-color: #87CEEA;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: ##e3f7ff;
+  border-color: #bfedff;
+}
+
+.btn-check:focus + .btn-secondary, .btn-secondary:focus {
+  color: #fff;
+  background-color: ##e3f7ff;
+  border-color: #bfedff;
+  box-shadow: 0 0 0 0.25rem rgba(90, 108, 131, 0.5);
+}
+
+.btn-check:checked + .btn-secondary,
+.btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #bfedff;
+  border-color: #2e3e52;
+}
+
+.btn-check:checked + .btn-secondary:focus,
+.btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(90, 108, 131, 0.5);
+}
+
+.btn-secondary:disabled, .btn-secondary.disabled {
+  color: #fff;
+  background-color: #87CEEA;
+  border-color: #87CEEA;
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #bfedff;
+  border-color: #bfedff;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(90, 108, 131, 0.5);
+}
+.btn-outline-secondary {
+  color: #bfedff;
+  border-color: #bfedff;
+}
+
+.btn-outline-secondary:hover {
+  color: rgba(90, 108, 131, 0.5);
+  background-color: #bfedff;
+  border-color: #bfedff;
+}
+.btn-outline-secondary:focus, .btn-outline-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+  color: #bfedff;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #bfedff;
+  border-color: #bfedff;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* -- Homepage Section #1 - Title -- */
+.container-fluid{
+  padding: 0;
+}
+.about-our-story, .contact-us{
+  cursor: pointer;
+}
+
+.navbar-toggler{
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  min-height: 5em;
+  min-width: 4.5em;
+  margin: 10% 4%;
+}
+
+.nav-padding{
+  padding: 2% 10%;
+}
+.nav-trans{
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background: linear-gradient(rgba(118,127,139,.4), rgba(0,0,0,.7)), url("../images/Tiny-House-Kichen-Bamboo.jpg");
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.masthead-logo{
+  width: 85%;
+}
+
+
+.img-overlay{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title-h1{
+  line-height: 0.6;
+  margin-bottom: 0.3em;
+}
+.title-h2{
+  letter-spacing: -0.04em;
+  line-height: 1.7;
+  margin-top: 0.5em;
+}
+.button-title{
+  padding: 1em;
+  margin-top: 1.5em;
+}
+
+/* <!-- Homepage Section #2 - Affordable Financial Freedom --> */
+.section-aff{
+  background-color: #f2f4fa;
+  padding: 8% 0 ;
+}
+.ff-left{
+  padding: 0 10%;
+  margin-bottom: 8%;
+  height:100%;
+}
+.ff-right{
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.check-space{
+  margin: 0 5%;
+}
+.carousel-inner{
+
+}
+.img-car{
+  width:100%;
+}
+.shift-ctrl{
+  position: absolute;
+  bottom: 5em;
+}
+
+/* Homepage Section #3 - Testimonial bar */
+.testy-container{
+
+  text-align: center;
+  background: #e6f5fa;
+}
+.car-item-testy{
+  padding: 5% 16%;
+}
+#carouselTesty .carousel-indicators li{
+  background-color: #3D526D;
+}
+
+.testy-control .carousel-control-prev-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%233D526D' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}
+
+.testy-control .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%233D526D'  width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.testy-person{
+  color: #3D526D;
+  font-weight: 900;
+}
+.testy-ind{
+  border-style: dashed;
+  border-width: 0.2em;
+  border-color: #3D526D;
+  padding: 4%;
+}
+
+/* Homepage Section #4 - Virtual Tour of The Ben */
+
+.virtual-sect{
+  margin-bottom: 8%;
+}
+.virtual-title-container{
+  text-align: center;
+  margin: 0 auto;
+  width: 25%;
+}
+.virtual-title{
+  text-align: center;
+  padding: 6em 1em 0;
+}
+.virtual-price{
+  text-align: center;
+  padding: .5em;
+}
+.butt-pad{
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+.virtual-text{
+  text-align: center;
+  position: absolute;
+  top:80%;
+  background: rgba(118,127,139,.6);
+  padding: 0.3em 1em;
+  font-weight: 700;
+}
+
+/* Expand Your Living Space (Most of these are defined in section #3 above) */
+
+.ff-ELSleft{
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 8%;
+}
+
+.section-ELS{
+  background: #F2F4FA;
+  padding: 8% 0;
+}
+.ff-expand{
+  padding: 0 8%;
+  height:100%;
+
+}
+
+    /* <!-- Homepage Section #6 - Tiny House Experience Video --> */
+.video-sect{
+  margin-top: 10em;
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+.wrapVideo{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.wrapVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Popular Tiny House Options */
+.pop-sect{
+  position: relative;
+  background: #F2F4FA;
+  padding: 8% 0;
+  display: block;
+
+
+}
+.pop-title{
+  text-align: center;
+}
+.opt-col{
+  padding: 0;
+}
+.opt-container{
+  margin: 0 8%;
+  background: #F2F4FA;
+
+}
+.opt-img{
+  padding: 2em;
+  position: relative;
+  width: 100%
+}
+
+.icon-container{
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  margin: 1em;
+  text-align: center;
+}
+.fa-space{
+  margin-bottom: 0.4em;
+}
+
+.opt-icon{
+  width: 50%;
+  margin-top: 100%;
+}
+.opt-text{
+  color: white;
+  margin-top: 100%;
+}
+
+/*################################# FOOOOOOOOOOOOOOOTER! ########################*/
+.footer{
+  padding: 8% 10%;
+  background: #a6adb4;
+}
+
+.faf{
+  padding-right: 2em;
+}
+
+
+.emailNewsletter{
+  border: none;
+  border-bottom: .5px solid #3d526d;
+  background: none;
+  min-width: 300px;
+  padding:10px;
+  margin-right: 10px;
+  font-size: x-large;
+}
+.rel-row{
+  margin: 4% 0;
+}
+
+.col-no-padding{
+  padding-left:0;
+}
+
+.chat-space{
+  margin-top: 4%;
+}
+
+#copyR{
+  text-align: center;
+}
+
+/* ######################### END OF CSS FOR MAIN HOMEPAGE (INCLUDES FOOTER CSS ^) ############################## */
+.booking-container{
+  width: 100%;
+  height:100%;
+  background-color: #12121f;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ########################################### CALENDAR CSS ########################################### */
+.calendar{
+  width: 45rem;
+  height: 55rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.month{
+  width: 100%;
+  height: 12rem;
+  background-color: #87CEEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
+}
+.month i{
+  font-size: 2.5rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+.month h1{
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+.month p{
+  font-size: 1.6rem;
+}
+.weekdays{
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  color: #87CEEA;
+}
+.weekdays div{
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem/7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0 0 0 0.5);
+}
+.days{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+.days div{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem/7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0 0 0 0.5);
+  transition: background-color 0.2s;
+}
+.days div:hover:not(.today){
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+
+}
+
+.days .day-events {
+  list-style: none;
+  margin-top: 3px;
+  text-align: center;
+  height: 12px;
+  line-height: 6px;
+  overflow: hidden;
+}
+
+.days .day-events span {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 5px;
+  height: 5px;
+  line-height: 5px;
+  margin: 0 1px;
+}
+
+.prev-date,
+.next-date{
+  opacity: 0.4;
+}
+.today{
+  background-color: #87CEEA;
+}
+
+
+/* ########################################### BOOKING CSS ########################################### */
+
+.booking{
+  width: 45rem;
+  height: 55rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+  padding: 8%;
+}
+.appt-line{
+  width: 90%;
+  border: 0;
+  border-top: #87CEEA dotted;
+  height: 2em;
+  margin: 10% 0 0 5% ;
+
+}
+.zero-pad{
+  padding: 0;
+}
+
+.fa-margin{
+  margin: auto 0;
+  color: #87CEEA;
+}
+.form-container{
+  padding: 2em 0;
+}
+.book-confirm{
+  width: 10%;
+  margin: 5px;
+}
+.book-confirm-2{
+  width: 90%;
+  margin: 5px;
+}
+
+
+.success-message{
+  width: 100%;
+  height: 40rem;
+  color: #87CEEA;
+  background: #222227;
+  text-align: center;
+  position: relative;
+  top:12%;
+  display: flex;
+
+}
+.message-center{
+  position: relative;
+  margin: auto;
+}
+
+/* <!-- ############################## ABOUT US SECTION ################################### --> */
+.aboutUs{
+  background: #f2f4fa;
+}
+.about-title{
+  text-align: center;
+  padding-top: 8%;
+}
+.our-story-font{
+  font-family: 'WindSong', cursive;
+  padding: 0 10%;
+
+}
+.about-img{
+  width: 100%;
+}
+.about-text{
+  line-height: 2;
+  padding: 0 10%;
+}
+.about-row-space{
+  margin: 5%;
+}
+.about-button{
+  padding: 1% 10%;
+  margin: 0 10%;
+}
+
+/* <!-- ############################## CONTACT US SECTION ################################### --> */
+.contactUs{
+  background: #f2f4fa;
+  padding: 10%
+}
+.contact-title{
+  text-align: center;
+  padding: 0 0 5%;
+}
+.contact-success{
+  width: 100%;
+  height: 40rem;
+  color: #3d526d;
+  background: #f2f4fa;
+  text-align: center;
+  position: relative;
+  top:15%;
+  display: flex;
+
+}
