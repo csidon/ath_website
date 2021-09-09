@@ -714,6 +714,12 @@ p{
   padding: 0 10%;
 
 }
+.about-space-top{
+  margin-top:2%;
+}
+.about-space-bottom{
+  margin-bottom:4%;
+}
 .about-img{
   width: 100%;
 }

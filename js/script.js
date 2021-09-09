@@ -92,6 +92,13 @@ renderCalendar();
 
 // ############################ Animating the Booking process (hardcoded) ######################
 // when I click on any button, hardcode to hide everything except testy and footer as reset
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 function hideMain(){
   $(".pop-sect").fadeOut(500);
   $(".video-sect").fadeOut(500);
@@ -121,6 +128,7 @@ $(".book-butt").click(function(){
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
+  scrollToTop();
   $(".booking-container").slideDown(500);
 });
 
@@ -136,6 +144,7 @@ $("#booking-submit").click(function(){
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
+
   $(".success-message").slideDown(800);
 });
 
@@ -146,6 +155,7 @@ $(".about-our-story").click(function(){
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
+  scrollToTop();
   $(".aboutUs").slideDown(800);
 })
 /* <!-- ############################## CONTACT US SECTION ################################### --> */
@@ -154,6 +164,7 @@ $(".contact-us").click(function(){
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
+  scrollToTop();
   $(".contactUs").slideDown(800);
 })
 
@@ -162,24 +173,25 @@ $("#contact-submit").click(function(){
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
+  scrollToTop();
   $(".contact-success").slideDown(800);
 });
 
 // ###################### FORM VALIDATION ####################
-function validateForm() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-}
+// function validateForm() {
+//   'use strict';
+//   window.addEventListener('load', function() {
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.getElementsByClassName('needs-validation');
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function(form) {
+//       form.addEventListener('submit', function(event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add('was-validated');
+//       }, false);
+//     });
+//   }, false);
+// }
