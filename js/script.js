@@ -91,7 +91,6 @@ document.querySelector(".next").addEventListener("click",()=>{
 renderCalendar();
 
 // ############################ Animating the Booking process (hardcoded) ######################
-// when I click on any button, hardcode to hide everything except testy and footer as reset
 
 // When the user clicks on the button, scroll to the top of the document
 function scrollToTop() {
@@ -99,6 +98,7 @@ function scrollToTop() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// Setting up functions: when I click on any button, hide everything except testy and footer as reset
 function hideMain(){
   $(".pop-sect").fadeOut(500);
   $(".video-sect").fadeOut(500);
@@ -112,7 +112,7 @@ function hideAllSuccessMessages(){
   $(".success-message").fadeOut(500);
 }
 function hideAllSections(){
-  $(".booking-container").fadeOut(500);
+  $(".cal-section").fadeOut(500);
   $("#booking-section").fadeOut(500);
   $(".booking-details").fadeOut(500);
 
@@ -120,6 +120,7 @@ function hideAllSections(){
   $(".aboutUs").fadeOut(500);
 }
 
+// call reset functions to start with, and implement the functions in order when specific buttons are pressed.
 hideAllSections();
 hideAllSuccessMessages();
 
@@ -129,7 +130,7 @@ $(".book-butt").click(function(){
   hideAllSections();
   hideMain();
   scrollToTop();
-  $(".booking-container").slideDown(500);
+  $(".cal-section").slideDown(500);
 });
 
 $("#demo-button").click(function(){

@@ -7,6 +7,15 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
   <title>Absolute Tiny Houses</title>
 
+  <!-- for favicon (thanks to realfavicongenerator.net) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -242,7 +251,9 @@
     <!-- @Beula why doesn't it work :/ class="needs-validation" novalidate -->
     <form>
       <div class="form-group row">
-        <label for="firstName" class="col-sm-2 col-form-label"> <h6>Your First Name</h6></label>
+        <label for="firstName" class="col-sm-2 col-form-label">
+          <h6>Your First Name</h6>
+        </label>
         <div class="col-sm-10">
           <input type="text" class="form-control" placeholder="Jane" id="firstName" required>
           <!-- <div class="invalid-feedback">
@@ -251,25 +262,33 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="lastName" class="col-sm-2 col-form-label"><h6>Your Last Name</h6></label>
+        <label for="lastName" class="col-sm-2 col-form-label">
+          <h6>Your Last Name</h6>
+        </label>
         <div class="col-sm-10">
           <input type="text" class="form-control" placeholder="Doe" id="lastName">
         </div>
       </div>
       <div class="form-group row">
-        <label for="yourEmail" class="col-sm-2 col-form-label"><h6>Your Email Address</h6></label>
+        <label for="yourEmail" class="col-sm-2 col-form-label">
+          <h6>Your Email Address</h6>
+        </label>
         <div class="col-sm-10">
           <input type="email" class="form-control" placeholder="sayHello@youAreAwesome.com" id="yourEmail">
         </div>
       </div>
       <div class="form-group row">
-        <label for="yourPhone" class="col-sm-2 col-form-label"><h6>Best Contact Number</h6></label>
+        <label for="yourPhone" class="col-sm-2 col-form-label">
+          <h6>Best Contact Number</h6>
+        </label>
         <div class="col-sm-10">
           <input type="number" class="form-control" placeholder="Phone" pattern="[0-9]">
         </div>
       </div>
       <div class="form-group row">
-        <label for="contactMessageDetails" class="col-sm-2 col-form-label"><h6>Ask Us Anything</h6></label>
+        <label for="contactMessageDetails" class="col-sm-2 col-form-label">
+          <h6>Ask Us Anything</h6>
+        </label>
         <div class="col-sm-10">
           <textarea class="form-control" id="contactMessageDetails" placeholder="Message/details" rows="3"></textarea>
         </div>
@@ -537,39 +556,45 @@
   </section>
 
   <!-- ######################################### BOOKING SYSTEM ############################################ -->
+  <section class="cal-section">
+    <div class="row no-gutters">
+      <div class="col schedule-title">
+        <h1>Schedule a Viewing</h1>
+      </div>
+    </div>
 
-  <div class="booking-container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">
-              <h1></h1><br>
-              <p></p>
+    <div class="booking-container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="calendar">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">
+                <h1></h1><br>
+                <p></p>
+              </div>
+              <i class="fas fa-angle-right next"></i>
             </div>
-            <i class="fas fa-angle-right next"></i>
-          </div>
-          <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tues</div>
-            <div>Weds</div>
-            <div>Thurs</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tues</div>
+              <div>Weds</div>
+              <div>Thurs</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
 
 
-          <div class="days apptEvent">
-            <div class="prev-date">26</div>
-            <div class="prev-date">27</div>
-            <div class="prev-date">28</div>
-            <div class="prev-date">29</div>
-            <div class="prev-date">30</div>
-            <div class="apptEvent">16</div>
+            <div class="days apptEvent">
+              <div class="prev-date">26</div>
+              <div class="prev-date">27</div>
+              <div class="prev-date">28</div>
+              <div class="prev-date">29</div>
+              <div class="prev-date">30</div>
+              <div class="apptEvent">16</div>
 
-            <!-- This portion is now no longer needed as it is dynamically displayed using js script monthDays function
+              <!-- This portion is now no longer needed as it is dynamically displayed using js script monthDays function
                 <div>1</div>
                 <div>2</div>
                 <div>3</div>
@@ -601,72 +626,73 @@
                 <div>29</div>
                 <div>30</div>
                 <div>31</div> -->
-            <!-- <div class="next-date">1</div>
+              <!-- <div class="next-date">1</div>
                 <div class="next-date">2</div>
                 <div class="next-date">3</div>
                 <div class="next-date">4</div>
                 <div class="next-date">5</div>
                 <div class="next-date">6</div> -->
+            </div>
+            <button type="button" class="btn btn-outline-primary" name="demo-button" id="demo-button">For demo purposes only - Click to proceed</button>
           </div>
-          <button type="button" class="btn btn-outline-primary" name="demo-button" id="demo-button">For demo purposes only - Click to proceed</button>
         </div>
-      </div>
 
-      <!-- Booking button section -->
-      <div id="booking-section" class="col-lg-6 zero-pad">
-        <div class="container zero-pad">
-          <div class="booking">
-            <h3>1 Appointment Available</h3>
-            <h5>For Thursday September 16 2021</h5>
-            <button type="button" name="button" class="btn btn-info btn-lg mt-5" id="bookingButton">10:30am</button>
+        <!-- Booking button section -->
+        <div id="booking-section" class="col-lg-6 zero-pad">
+          <div class="container zero-pad">
+            <div class="booking">
+              <h3>1 Appointment Available</h3>
+              <h5>For Thursday September 16 2021</h5>
+              <button type="button" name="button" class="btn btn-info btn-lg mt-5" id="bookingButton">10:30am</button>
 
-            <!-- After selecting available appt -->
-            <div class="booking-details">
-              <div class="row">
-                <hr class="appt-line">
+              <!-- After selecting available appt -->
+              <div class="booking-details">
+                <div class="row">
+                  <hr class="appt-line">
+                </div>
+                <div class="row appt-selected">
+                  <div class="col-sm-2 fa-margin">
+                    <i class="fas fa-check-circle fa-3x"></i>
+                  </div>
+                  <div class="col-sm-9">
+                    <h3>Appointment Selected</h3>
+                    <h5>Thursday, September 16, 2021, 10:30am</h5>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-row form-container">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-8">
+                      <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <input type="number" class="form-control" placeholder="Phone" pattern="[0-9]">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="bookingScheduleMessageDetails"></label>
+                    <textarea class="form-control" id="bookingScheduleMessageDetails" placeholder="Message/details" rows="3"></textarea>
+                  </div>
+                  <button id="booking-submit" class="btn btn-info mt-3" type="submit" name="submit-form">Submit Form</button>
+                </form>
+
+
               </div>
-              <div class="row appt-selected">
-                <div class="col-sm-2 fa-margin">
-                  <i class="fas fa-check-circle fa-3x"></i>
-                </div>
-                <div class="col-sm-9">
-                  <h3>Appointment Selected</h3>
-                  <h5>Thursday, September 16, 2021, 10:30am</h5>
-                </div>
-              </div>
-              <form>
-                <div class="form-row form-container">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-8">
-                    <input type="email" class="form-control" placeholder="Email">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <input type="number" class="form-control" placeholder="Phone" pattern="[0-9]">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="bookingScheduleMessageDetails"></label>
-                  <textarea class="form-control" id="bookingScheduleMessageDetails" placeholder="Message/details" rows="3"></textarea>
-                </div>
-                <button id="booking-submit" class="btn btn-info mt-3" type="submit" name="submit-form">Submit Form</button>
-              </form>
-
 
             </div>
-
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <article class="success-message">
     <div class="message-center">
       <h3>You have successfully scheduled an appointment!</h3>

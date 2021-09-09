@@ -532,11 +532,19 @@ p{
 }
 
 /* ######################### END OF CSS FOR MAIN HOMEPAGE (INCLUDES FOOTER CSS ^) ############################## */
+.schedule-title{
+  color: #eee;
+  background-color: #12121f;
+  text-align: center;
+  padding: 5% 0 3%;
+  font-weight: 400;
+  
+}
 .booking-container{
   width: 100%;
   height:100%;
-  background-color: #12121f;
   color: #eee;
+  background-color: #12121f;
   display: flex;
   justify-content: center;
   align-items: center;
