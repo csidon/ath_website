@@ -100,32 +100,25 @@ function scrollToTop() {
 
 // Setting up functions: when I click on any button, hide everything except testy and footer as reset
 function hideMain(){
-  $(".pop-sect").fadeOut(500);
-  $(".video-sect").fadeOut(500);
-  $(".section-ELS").fadeOut(500);
-  $(".virtual-sect").fadeOut(500);
-  $(".section-aff").fadeOut(500);
-  $(".masthead").fadeOut(500);
+  $(".pop-sect,.video-sect,.section-ELS,.virtual-sect,.section-aff,.masthead").fadeOut(500);
 }
 function hideAllSuccessMessages(){
-  $(".contact-success").fadeOut(500);
-  $(".success-message").fadeOut(500);
+  $(".contact-success, .success-message").fadeOut(500);
 }
 function hideAllSections(){
-  $(".cal-section").fadeOut(500);
-  $("#booking-section").fadeOut(500);
-  $(".booking-details").fadeOut(500);
-
-  $(".contactUs").fadeOut(500);
-  $(".aboutUs").fadeOut(500);
+  $(".cal-section,#booking-section,.booking-details,.contactUs,.aboutUs").fadeOut(500);
+}
+function hideWhoops(){
+  $(".not-complete").fadeOut(500);
 }
 
 // call reset functions to start with, and implement the functions in order when specific buttons are pressed.
 hideAllSections();
 hideAllSuccessMessages();
+hideWhoops();
 
 $(".book-butt").click(function(){
-  $(".testy-container").fadeOut(500);
+  $(".testy-container").fadeOut(500); //because I don't want the testimonial container to show for the booking page
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
@@ -142,15 +135,15 @@ $("#bookingButton").click(function(){
 });
 
 $("#booking-submit").click(function(){
-  hideAllSuccessMessages();
+  $(".contact-success").fadeOut(500);
   hideAllSections();
   hideMain();
-
-  $(".success-message").slideDown(800);
+  scrollToTop();
+  $(".success-message").slideDown(500);
 });
 
 /* <!-- ############################## ABOUT US SECTION ################################### --> */
-$('.aboutUs').hide();
+// $('.aboutUs').hide();
 
 $(".about-our-story").click(function(){
   hideAllSuccessMessages();
@@ -170,29 +163,32 @@ $(".contact-us").click(function(){
 })
 
 $("#contact-submit").click(function(){
-  validateForm();
   hideAllSuccessMessages();
   hideAllSections();
   hideMain();
   scrollToTop();
-  $(".contact-success").slideDown(800);
+  $(".contact-success").slideDown(500);
 });
 
-// ###################### FORM VALIDATION ####################
-// function validateForm() {
-//   'use strict';
-//   window.addEventListener('load', function() {
-//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//     var forms = document.getElementsByClassName('needs-validation');
-//     // Loop over them and prevent submission
-//     var validation = Array.prototype.filter.call(forms, function(form) {
-//       form.addEventListener('submit', function(event) {
-//         if (form.checkValidity() === false) {
-//           event.preventDefault();
-//           event.stopPropagation();
-//         }
-//         form.classList.add('was-validated');
-//       }, false);
-//     });
-//   }, false);
-// }
+// ########################### WHOOPS NOTIFICATION ############################
+$(".whoops").click(function(){
+  hideAllSuccessMessages();
+  hideAllSections();
+  hideMain();
+  $(".testy-container").fadeOut(500); //because I don't want the testimonial container to show for Whoops! page
+  scrollToTop();
+  $(".not-complete").slideToggle(500);
+});
+
+
+// This is a bastardised version of JS and jquery that I managed to come up with, that calls all empty # links to a variable that can then direct people to the "Whoops" page
+var allLinks = document.querySelectorAll("a[href='#']");
+
+$(allLinks).click(function(){
+  hideAllSuccessMessages();
+  hideAllSections();
+  hideMain();
+  $(".testy-container").fadeOut(500); //because I don't want the testimonial container to show for Whoops! page
+  scrollToTop();
+  $(".not-complete").slideToggle(500);
+});

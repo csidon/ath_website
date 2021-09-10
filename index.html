@@ -97,7 +97,9 @@
                 <h1 class="title-h1">Hideaway</h1>
                 <div class="row">
                   <div class="col-lg-6 button-title">
-                    <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Starts Here</button>
+                    <!-- <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Starts Here</button>
+                    section-aff -->
+                    <a href="#aff" class="btn btn-primary btn-block btn-lg" type="button">Starts Here</a>
                     <!-- <a class="btn btn-primary btn-block btn-lg" href="#">Starts Here</a> -->
                   </div>
                   <div class="col-lg-6 button-title">
@@ -114,7 +116,7 @@
   <!-- Homepage Section #2 - Affordable Financial Freedom -->
   <!-- Basic structure: 1 row, 2 cols, with 5 rows in left col -->
   <!-- ################ Note: ID book-butt links all buttons to Schedule/booking an appointment ######################### -->
-  <section class="section-aff">
+  <section class="section-aff" id="aff">
     <div class="row no-gutters">
       <div class="col-lg-6">
         <div class="col ff-left">
@@ -128,8 +130,9 @@
             <i class="fas fa-check check-space"></i> Connect with nature<br>
             Generate your own electricity, capture your own water, and empower yourself to move from place to place.<br>
           </p>
-          <h6> <a href="#">Learn More </a> or</h6>
-          <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Build Your Tiny Home</button>
+          <button type="button" class="btn btn-link btn-xs whoops">Learn More or</button>
+          <!-- <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Build Your Tiny Home</button> -->
+          <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Schedule a Live Viewing</button>
           <!-- <a class="btn btn-primary btn-block btn-lg" href="#">Build Your Tiny Home</a> -->
         </div>
       </div>
@@ -248,7 +251,7 @@
       <h4 class="text-dark">We'd love to share our expertise with you. <br>Fill out the form and we'll be in touch as soon as possible. </h4>
     </div>
 
-    <!-- @Beula why doesn't it work :/ class="needs-validation" novalidate -->
+
     <form>
       <div class="form-group row">
         <label for="firstName" class="col-sm-2 col-form-label">
@@ -313,7 +316,7 @@
               <h6>I need help on council regulations</h6>
             </label>
           </div>
-          <input id="contact-submit" class="btn btn-info mt-3" type="submit" name="submit-form">
+          <button id="contact-submit" class="btn btn-info mt-3" type="button" name="button">Talk to Us</button>
         </div>
       </div>
     </form>
@@ -388,11 +391,13 @@
       </div>
       <div class="row virtual-price">
         <div class="col-lg-6 butt-pad">
-          <button class="btn btn-primary btn-block btn-lg m-1 book-butt" type="button" name="button">Build Yours</button>
+          <a class="btn btn-primary btn-block btn-lg m-1" href="#pop-choices">Tech Specs</a>
+          <!-- <button class="btn btn-primary btn-block btn-lg m-1 book-butt" type="button" name="button">Build Yours</button> -->
           <!-- <a class="btn btn-primary btn-block btn-lg m-1" href="#">Build Yours</a> -->
         </div>
         <div class="col-lg-6 butt-pad">
-          <a class="btn btn-outline-dark btn-block btn-lg m-1" href="#">Tech Specs</a>
+          <!-- <a class="btn btn-outline-dark btn-block btn-lg m-1" href="#">Tech Specs</a> -->
+          <button class="btn btn-outline-dark btn-block btn-lg m-1 about-our-story" type="button" name="button">Why Us?</button>
         </div>
       </div>
     </article>
@@ -490,9 +495,10 @@
             Generate your own electricity, capture your own water, and empower yourself to move from place to place.Trust me this is great. Listen to me. Can you tell this is nonsense text? I don't have the time to wordsmith this as well as create
             this website...<br>
           </p>
-          <h6> <a href="#">Learn More </a> or</h6>
+          <button type="button" class="btn btn-link btn-xs whoops">Learn More or</button>
           <!-- <a class="btn btn-primary btn-block btn-lg" href="#">Build Your Tiny Home</a> -->
-          <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Build Your Tiny Home</button>
+          <!-- <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Build Your Tiny Home</button> -->
+          <button class="btn btn-primary btn-block btn-lg book-butt" type="button" name="button">Schedule a Viewing</button>
         </div>
       </div>
     </div>
@@ -508,7 +514,7 @@
     </div>
   </section>
   <!-- /* Popular Tiny House Options */ -->
-  <section class="pop-sect">
+  <section class="pop-sect" id="pop-choices">
     <div class="extra">
 
       <div class="row no-gutters">
@@ -516,8 +522,9 @@
           <h2>Popular Tiny House Options</h2>
         </div>
       </div>
-      <div class="row opt-container">
+      <div class="row opt-container whoops">
         <div class="col-lg-3 col-sm-6 opt-col">
+
           <a href="#"><img class="opt-img" src="images\optIcons\optMat.jpg" alt="Material Options"></a>
           <div>
             <div class="icon-container">
@@ -559,7 +566,12 @@
   <section class="cal-section">
     <div class="row no-gutters">
       <div class="col schedule-title">
-        <h1>Schedule a Viewing</h1>
+        <h2>Schedule a Viewing</h2>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col schedule-text-container">
+        <h5 class="sch-text">Schedule a viewing with us, and we'll take you through on a virtual tour of a tiny house example. <br> Let us introduce you to all the options that you can explore!</h5>
       </div>
     </div>
 
@@ -680,7 +692,7 @@
                     <label for="bookingScheduleMessageDetails"></label>
                     <textarea class="form-control" id="bookingScheduleMessageDetails" placeholder="Message/details" rows="3"></textarea>
                   </div>
-                  <button id="booking-submit" class="btn btn-info mt-3" type="submit" name="submit-form">Submit Form</button>
+                  <button id="booking-submit" class="btn btn-info mt-3" type="button" name="submit-form">Submit Form</button>
                 </form>
 
 
@@ -700,6 +712,18 @@
     </div>
   </article>
 
+  <!-- Sorry, page in progress! -->
+  <article class="not-complete">
+    <div class="whoops-message">
+      <h3>Whoops!</h3>
+      <h5 class="white-text">This site is still a work in progress. Check back later for more information!</h5>
+      <br><br>
+      <h6 class="white-text">Wanna chat?</h6>
+      <p class="white-text">Ring us at 021 123 123 <br> or </p>
+      <button class="btn btn-primary btn-lg contact-us" type="button" name="button">Contact Us</button>
+
+    </div>
+  </article>
 
 
   <!-- Page footer... finally!! (STAYS FOR ALL PAGES) -->
@@ -849,6 +873,8 @@
       </footer>
 
   </section>
+
+
 
   <!-- JS and jQuery CDN-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

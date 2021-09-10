@@ -3,7 +3,9 @@ margin: 0;
 padding: 0;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* Restyling Bootstrap's colors to mine without losing responsiveness */
 :root {
@@ -39,6 +41,7 @@ a:hover {
   text-decoration: none;
 }
 
+
 body{
   font-family: 'Lato', sans-serif;
   font-size: 62.5%;
@@ -73,6 +76,16 @@ p{
   font-weight: 300;
   font-size: 1.6em;
   line-height: 2;
+}
+.btn-link {
+  color: #222;
+  text-decoration: none;
+
+}
+.btn-link:hover {
+  color: #87CEEA;
+  text-decoration: none;
+
 }
 
 .btn {
@@ -536,10 +549,20 @@ p{
   color: #eee;
   background-color: #12121f;
   text-align: center;
-  padding: 5% 0 3%;
+  padding: 5% 0 0;
   font-weight: 400;
-  
 }
+.schedule-text-container{
+  color: #eee;
+  background-color: #12121f;
+  text-align: center;
+  padding: 1% 0 3%;
+  font-weight: 300;
+}
+.sch-text{
+  line-height: 2;
+}
+
 .booking-container{
   width: 100%;
   height:100%;
@@ -762,4 +785,27 @@ p{
   top:15%;
   display: flex;
 
+}
+
+/* Whoops! Not complete! */
+.not-complete{
+  width: 100%;
+  height: 40rem;
+  color: #87CEEA;
+  background: #222227;
+  text-align: center;
+  position: relative;
+  top:12%;
+  display: flex;
+
+}
+.whoops-message{
+  position: relative;
+  margin: auto;
+}
+.white-text{
+  color: white;
+}
+.blue-text{
+  color: #87CEEA;
 }
